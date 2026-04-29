@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fcf9f8;
+    color: #1c1b1b;
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #8b1014;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  /* Material Symbols */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+
+  /* Heritage Modernism Design System */
+  .whisper-shadow {
+    box-shadow: 0 30px 60px -12px rgba(101, 0, 7, 0.06);
+  }
+
+  .whisper-shadow-sm {
+    box-shadow: 0 10px 40px -10px rgba(101, 0, 7, 0.08);
+  }
+
+  .hero-scrim {
+    background: linear-gradient(to right, rgba(28, 27, 27, 0.6) 0%, rgba(28, 27, 27, 0) 100%);
+  }
+
+  .hero-scrim-bottom {
+    background: linear-gradient(to top, rgba(101, 0, 7, 0.6) 0%, transparent 60%);
+  }
+
+  /* Boutique underline input style */
+  .input-boutique {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #8d706d;
+    background: transparent;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .input-boutique:focus {
+    border-bottom: 2px solid #650007;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .input-boutique::placeholder {
+    color: #c4b5b3;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e1bfbb;
+    border-radius: 10px;
+  }
+
+  /* Product card image zoom */
+  .product-img-zoom {
+    transition: transform 0.7s ease;
+  }
+
+  .group:hover .product-img-zoom {
+    transform: scale(1.1);
+  }
+
+  /* Admin sidebar active link */
+  .admin-nav-active {
+    @apply bg-red-50 text-red-900 border-r-4 border-red-900 font-semibold;
+  }
+
+  .admin-nav-link {
+    @apply flex items-center gap-3 px-4 py-3 text-stone-500 hover:bg-stone-100 transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Gradient text */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #650007 0%, #8b1014 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
